@@ -10,6 +10,7 @@ public class Client1Controller {
 	@GetMapping(value="/responde/{msg}")
 	public String responseToTheCall( @PathVariable String msg)
 	{
+		System.out.println(msg);
 		return "Hi I got Your Massage Don't worry I Am Here to Help You Out..*";
 	}
 	
