@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>Pavan_Soulutions</groupId>
-	<artifactId>01_ServiceRegistry_Eureka_Server</artifactId>
+	<artifactId>01_ServiceRegistry_Eureka_Client_1</artifactId>
 	<version>1.1</version>
 	<packaging>war</packaging>
-	<name>01_ServiceRegistry_Eureka_Server</name>
+	<name>01_ServiceRegistry_Eureka_Client_1</name>
 	<description>Project to work with service registry to keep track of the services</description>
 	<url/>
 	<licenses>
@@ -38,9 +38,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,7 +51,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
