@@ -1,5 +1,22 @@
 package com.pavan.restController;
 
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value="/api/test")
+@RefreshScope
 public class MsgController {
+	
+	
+
+	@Value("${msg:Config Server not working , plz check...}")
+	public String msg;
+
+	@GetMapping("/greet")
+	public ResponseEntity<String> showMsg() {
+		return new ResponseEntity<String>(msg, HttpStatus.OK);
+	}
 
 }
