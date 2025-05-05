@@ -19,6 +19,7 @@ public class JobExecutorService {
 		{
 			case EMAIL -> {jobService.executeEmailTask(jobRequest.getParams());}
 			case REPORT -> {jobService.executeReportTask(jobRequest.getParams());}
+			case DB -> {jobService.executeDbConnection(jobRequest.getParams());}
 			default -> {throw new IllegalArgumentException("UnSupported Task Type");}
 		}
 	}
