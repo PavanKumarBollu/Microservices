@@ -32,6 +32,14 @@ public class JobService {
 	public void executeReportTask(Map<String, String> params)
 	{
 		logger.info("Started Report Task On Thread : " + Thread.currentThread().getName());
+		String reportType = params.getOrDefault("type", "SUMMERY");
+		
+		try {
+			Thread.sleep(3000);
+			logger.info("Generated {} Report ", reportType);
+		} catch (InterruptedException e) {
+		}
+		
 	}
 
 }
