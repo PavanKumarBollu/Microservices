@@ -2,7 +2,7 @@ package com.pavan.service;
 
 public enum TaskType {
 	
-	EMAIL, REPORT;
+	EMAIL, REPORT, DB;
 	
 	public static TaskType fromString(String type)
 	{
