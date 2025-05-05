@@ -23,6 +23,7 @@ public class JobService {
 			Thread.sleep(3000);
 			logger.info("Email Sent To: {} With Message: {} ", recipient, message);
 		} catch (InterruptedException e) {
+			logger.info("Error In Executing the email Task " + e);
 			System.out.println("Error in Executing the Email Task " + e.getMessage());
 		}
 		
@@ -38,6 +39,8 @@ public class JobService {
 			Thread.sleep(3000);
 			logger.info("Generated {} Report ", reportType);
 		} catch (InterruptedException e) {
+			logger.info("Error In Executing the Report Task " + e);
+			
 		}
 		
 	}
