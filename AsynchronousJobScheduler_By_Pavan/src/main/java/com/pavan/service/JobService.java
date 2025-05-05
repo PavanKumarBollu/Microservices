@@ -23,7 +23,7 @@ public class JobService {
 		
 		try {
 			Thread.sleep(5000);
-			logger.info("Email Sent To: {} With Message: {} ", recipient, message);
+			logger.error("Email Sent To: {} With Message: {} ", recipient, message);
 		} catch (InterruptedException e) {
 			logger.info("Error In Executing the email Task " + e);
 			System.out.println("Error in Executing the Email Task " + e.getMessage());
@@ -41,7 +41,7 @@ public class JobService {
 			Thread.sleep(5000);
 			logger.info("Generated {} Report ", reportType);
 		} catch (InterruptedException e) {
-			logger.info("Error In Executing the Report Task " + e);
+			logger.error("Error In Executing the Report Task " + e);
 			
 		}
 		
@@ -49,7 +49,16 @@ public class JobService {
 	
 	public void executeDbConnection(Map<String, String> params)
 	{
+		logger.info("Started Db Connection task on Thread : " + Thread.currentThread().getName());
+		String userName = params.getOrDefault("userName", "root");
+		String password = params.getOrDefault("password", "");
 		
+		try {
+			Thread.sleep(5000);
+			logger.info("Connection to Db With Username : {} and Password : {}", userName, )
+		} catch (InterruptedException e) {
+			logger.error("Error in Executing the Db Connection Task " + e);
+		}
 	}
 
 }
