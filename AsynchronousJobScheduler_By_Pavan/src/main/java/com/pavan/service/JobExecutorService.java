@@ -13,7 +13,7 @@ public class JobExecutorService {
 	
 	public void triggerJob(JobRequest jobRequest)
 	{
-		
+		TaskType taskType = TaskType.fromString(jobRequest.getTaskType());
 	}
 
 }
