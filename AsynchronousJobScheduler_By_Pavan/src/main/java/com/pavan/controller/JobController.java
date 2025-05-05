@@ -25,11 +25,10 @@ public class JobController {
 		return ResponseEntity.ok("Job Triggered SuccessFully");
 		
 	}
-	@GetMapping("/trigger")
-	public ResponseEntity<String> getMethod()
-	{
-		return ResponseEntity.ok("Sucess");
-	}
+	/*
+	 * @GetMapping("/trigger") public ResponseEntity<String> getMethod() { return
+	 * ResponseEntity.ok("Sucess"); }
+	 */
 	
 	
 }

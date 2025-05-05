@@ -16,7 +16,7 @@ public class JobService {
 	@Async
 	public void executeEmailTask(Map<String, String> params)
 	{
-		logger.info("Started Email Task On Thread {} ", Thread.currentThread().getName());
+		logger.info("Started Email Task On Thread : {} ", Thread.currentThread().getName());
 		
 		String recipient = params.getOrDefault("recipient", "PavanKumar@gmail.com");
 		String message = params.getOrDefault("message", "Mail Sending Task");
