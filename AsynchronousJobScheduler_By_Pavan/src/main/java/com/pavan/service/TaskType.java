@@ -1,5 +1,5 @@
 package com.pavan.service;
 
-public class TaskType {
+public enum TaskType {
 
 }
