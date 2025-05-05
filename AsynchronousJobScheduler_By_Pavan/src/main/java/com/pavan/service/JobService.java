@@ -14,13 +14,14 @@ public class JobService {
 	
 	public void executeEmailTask(Map<String, String> params)
 	{
+		logger.info("Started Email Task On the Thread {} ", Thread.currentThread().getName());
 		
 		String recipient = params.getOrDefault("recipient", "PavanKumar@gmail.com");
 		String message = params.getOrDefault("message", "Mail Sending Task");
 		
 		try {
 			Thread.sleep(3000);
-			
+			logger.info("Email Sent To: {} With Message: {} ", recipient, message);
 		} catch (InterruptedException e) {
 			System.out.println("Error in Executing the Email Task " + e.getMessage());
 		}
