@@ -14,7 +14,7 @@ public class JobService {
 	
 	public void executeEmailTask(Map<String, String> params)
 	{
-		logger.info("Started Email Task On the Thread {} ", Thread.currentThread().getName());
+		logger.info("Started Email Task On Thread {} ", Thread.currentThread().getName());
 		
 		String recipient = params.getOrDefault("recipient", "PavanKumar@gmail.com");
 		String message = params.getOrDefault("message", "Mail Sending Task");
@@ -31,7 +31,7 @@ public class JobService {
 	
 	public void executeReportTask(Map<String, String> params)
 	{
-		
+		logger.info("Started Report Task On Thread : " + Thread.currentThread().getName());
 	}
 
 }
