@@ -55,7 +55,7 @@ public class JobService {
 		
 		try {
 			Thread.sleep(5000);
-			logger.info("Connection to Db With Username : {} and Password : {}", userName, )
+			logger.info("Connection to Db With Username : {} and Password : {}", userName,password );
 		} catch (InterruptedException e) {
 			logger.error("Error in Executing the Db Connection Task " + e);
 		}
