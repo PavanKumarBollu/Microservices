@@ -6,7 +6,7 @@ public enum TaskType {
 	
 	public static TaskType fromString(String type)
 	{
-		return 
+		return TaskType.valueOf(type.toUpperCase());
 	}
 
 }
