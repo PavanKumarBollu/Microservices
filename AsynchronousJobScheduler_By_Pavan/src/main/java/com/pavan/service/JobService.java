@@ -46,5 +46,10 @@ public class JobService {
 		}
 		
 	}
+	
+	public void executeDbConnection(Map<String, String> params)
+	{
+		
+	}
 
 }
