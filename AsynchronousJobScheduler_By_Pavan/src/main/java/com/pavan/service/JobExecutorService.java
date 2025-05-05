@@ -18,8 +18,8 @@ public class JobExecutorService {
 		switch(taskType)
 		{
 			case EMAIL -> {jobService.executeEmailTask(jobRequest.getParams());}
-			case REPORT -> {}
-			default -> {}
+			case REPORT -> {jobService.executeReportTask(jobRequest.getParams());}
+			default -> {throw new IllegalArgumentException("UnSupported Task Type");}
 		}
 	}
 
