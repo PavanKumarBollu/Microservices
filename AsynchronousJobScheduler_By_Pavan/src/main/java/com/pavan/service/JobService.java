@@ -2,15 +2,19 @@ package com.pavan.service;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class JobService {
 	
+	public static final Logger logger = LoggerFactory.getLogger(JobService.class);
 	
 	
 	public void executeEmailTask(Map<String, String> params)
 	{
+		
 		String recipient = params.getOrDefault("recipient", "PavanKumar@gmail.com");
 		String message = params.getOrDefault("message", "Mail Sending Task");
 		
