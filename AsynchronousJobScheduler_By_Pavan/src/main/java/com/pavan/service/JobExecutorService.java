@@ -14,6 +14,13 @@ public class JobExecutorService {
 	public void triggerJob(JobRequest jobRequest)
 	{
 		TaskType taskType = TaskType.fromString(jobRequest.getTaskType());
+		
+		switch(taskType)
+		{
+			case EMAIL -> {jobService.executeEmailTask(jobRequest.getParams());}
+			case REPORT -> {}
+			default -> {}
+		}
 	}
 
 }
