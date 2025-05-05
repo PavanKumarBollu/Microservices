@@ -15,9 +15,10 @@ public class JobService {
 		String message = params.getOrDefault("message", "Mail Sending Task");
 		
 		try {
+			Thread.sleep(3000);
 			
 		} catch (InterruptedException e) {
-			// TODO: handle exception
+			System.out.println("Error in Executing the Email Task " + e.getMessage());
 		}
 		
 	}
