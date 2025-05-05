@@ -22,7 +22,7 @@ public class JobService {
 		String message = params.getOrDefault("message", "Mail Sending Task");
 		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			logger.info("Email Sent To: {} With Message: {} ", recipient, message);
 		} catch (InterruptedException e) {
 			logger.info("Error In Executing the email Task " + e);
@@ -38,7 +38,7 @@ public class JobService {
 		String reportType = params.getOrDefault("type", "SUMMERY");
 		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			logger.info("Generated {} Report ", reportType);
 		} catch (InterruptedException e) {
 			logger.info("Error In Executing the Report Task " + e);
